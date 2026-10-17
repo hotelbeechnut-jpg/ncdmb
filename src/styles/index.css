@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+  --paper: #faf8ff;
+  --lavender-100: #f1ecff;
+  --lavender-300: #cbb8ff;
+  --purple-500: #7c3aed;
+  --purple-700: #5b21b6;
+  --purple-900: #2e1065;
+  --ink: #1b1230;
+  --gold: #f5b93b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: Sora, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Dark section grain — tiny CSS noise via repeating gradient, cheap on GPU */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+.dark-glow {
+  background:
+    radial-gradient(600px 400px at 20% 10%, rgba(124, 58, 237, 0.35), transparent 60%),
+    radial-gradient(700px 500px at 85% 90%, rgba(124, 58, 237, 0.22), transparent 60%),
+    #2e1065;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+@supports not ((backdrop-filter: blur(1px))) {
+  .glass {
+    background: #ffffff;
+  }
+}
+.glass-dark {
+  background: rgba(46, 16, 101, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+@supports not ((backdrop-filter: blur(1px))) {
+  .glass-dark {
+    background: #2e1065;
+  }
+}
+
+/* Route entrance: opacity-only fade, no JS-driven opacity. Opacity-only on
+   purpose: no transform is ever applied, so the wrapper never becomes a
+   containing block and every position:fixed descendant (lightbox, nav,
+   music pill, floats, intro overlay) keeps positioning to the viewport.
+   `both` fill mode ends at opacity 1 even if frames are dropped — the
+   wrapper can never stick at 0. Reduced motion removes it entirely
+   (opacity 1 from first paint). */
+@keyframes route-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.route-enter {
+  animation: route-enter 200ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .route-enter { animation: none; }
+}
+
+/* Music pill equalizer bars (decorative; frozen under reduced motion). */
+.eq-bar {
+  width: 3px;
+  border-radius: 2px;
+  background: #F5B93B;
+  animation: eq-bounce 0.9s ease-in-out infinite;
+}
+.eq-bar-1 { height: 10px; animation-delay: 0s; }
+.eq-bar-2 { height: 16px; animation-delay: 0.2s; }
+.eq-bar-3 { height: 8px; animation-delay: 0.4s; }
+@keyframes eq-bounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .eq-bar { animation: none; }
+}
+
+/* Shimmer for Day 5 coming-soon card */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #f1ecff 25%, #ffffff 50%, #f1ecff 75%);
+  background-size: 800px 100%;
+  animation: shimmer 2.2s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .shimmer { animation: none; }
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 3px solid #f5b93b;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #faf8ff; }
+::-webkit-scrollbar-thumb { background: #cbb8ff; border-radius: 8px; }
+
+/* Hide scrollbars for filmstrip/carousel rails */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* RibbonDrift — slow auto-drift rows (transform only, GPU cheap) */
+@keyframes doc-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.doc-ribbon-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: doc-drift 60s linear infinite;
+}
+.doc-ribbon-track.reverse {
+  animation-direction: reverse;
+}
+.doc-ribbon:hover .doc-ribbon-track,
+.doc-ribbon.paused .doc-ribbon-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .doc-ribbon-track { animation: none; }
+}

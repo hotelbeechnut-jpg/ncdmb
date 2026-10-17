@@ -1,0 +1,13 @@
+/media-source/
+/day1/
+/day2/
+/day3/
+/day4/
+/day5/
+/dist/
+/node_modules/
+*.log
+.DS_Store
+Thumbs.db
+*.pptx
+!/public/media/day5/

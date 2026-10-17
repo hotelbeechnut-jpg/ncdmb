@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-10-13T12:24:17.154Z",
+  "days": {
+    "day1": {
+      "sourceImages": 18,
+      "sourceVideos": 0,
+      "manifestImages": 18,
+      "manifestVideos": 0,
+      "outputVideoBytes": 0,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "day2": {
+      "sourceImages": 6,
+      "sourceVideos": 0,
+      "manifestImages": 6,
+      "manifestVideos": 0,
+      "outputVideoBytes": 0,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "day3": {
+      "sourceImages": 45,
+      "sourceVideos": 0,
+      "manifestImages": 45,
+      "manifestVideos": 0,
+      "outputVideoBytes": 0,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "day4": {
+      "sourceImages": 30,
+      "sourceVideos": 0,
+      "manifestImages": 30,
+      "manifestVideos": 0,
+      "outputVideoBytes": 0,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "day5": {
+      "sourceImages": 23,
+      "sourceVideos": 0,
+      "manifestImages": 23,
+      "manifestVideos": 0,
+      "outputVideoBytes": 0,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "break-time": {
+      "sourceImages": 37,
+      "sourceVideos": 0,
+      "manifestImages": 37,
+      "manifestVideos": 0,
+      "outputVideoBytes": 0,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "activities": {
+      "sourceImages": 0,
+      "sourceVideos": 19,
+      "manifestImages": 0,
+      "manifestVideos": 19,
+      "outputVideoBytes": 25347079,
+      "reencoded": [
+        "tutorial-video.mp4"
+      ],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    },
+    "build": {
+      "sourceImages": 1,
+      "sourceVideos": 1,
+      "manifestImages": 1,
+      "manifestVideos": 1,
+      "outputVideoBytes": 554288,
+      "reencoded": [],
+      "skipped": [],
+      "pruned": 0,
+      "disappeared": 0
+    }
+  },
+  "warnings": [],
+  "people": {
+    "organizers": {
+      "source": 4,
+      "manifest": 4,
+      "skipped": []
+    },
+    "lecturer": {
+      "source": 11,
+      "manifest": 11,
+      "skipped": []
+    }
+  }
+}
