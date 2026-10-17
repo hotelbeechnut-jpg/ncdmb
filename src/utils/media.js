@@ -78,10 +78,27 @@ export function otherLecturerPhotos() {
 // media-source/build/ outputs (creator portrait + intro video), processed by
 // the same pipeline into manifest.build. Missing pieces yield nulls so
 // callers can omit those blocks gracefully.
+// The animated short (build-vid-XX-animation) is surfaced separately by
+// buildAnimation(); the creator intro is the first video that is not it.
+function isAnimationId(id) {
+  return /-animation(-|$)/.test(id || "");
+}
+
+function buildVideoRecord(vid) {
+  return vid
+    ? {
+        src: vid.src ? `/${vid.src}` : "",
+        poster: vid.poster ? `/${vid.poster}` : "",
+        duration: vid.duration,
+      }
+    : null;
+}
+
 export function buildMedia() {
   const m = getDayManifest("build");
   const img = (m.images || [])[0] ?? null;
-  const vid = (m.videos || [])[0] ?? null;
+  const vids = m.videos || [];
+  const vid = vids.find((v) => !isAnimationId(v.id)) ?? vids[0] ?? null;
   return {
     image: img
       ? {
@@ -95,14 +112,14 @@ export function buildMedia() {
           alt: "Portrait of Nathaniel Kenny Olie",
         }
       : null,
-    video: vid
-      ? {
-          src: vid.src ? `/${vid.src}` : "",
-          poster: vid.poster ? `/${vid.poster}` : "",
-          duration: vid.duration,
-        }
-      : null,
+    video: buildVideoRecord(vid),
   };
+}
+
+// The short animated movie shown on the Build Yours page.
+export function buildAnimation() {
+  const vids = getDayManifest("build").videos || [];
+  return buildVideoRecord(vids.find((v) => isAnimationId(v.id)) ?? null);
 }
 
 export function getDayManifest(dayKey) {

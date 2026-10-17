@@ -1,6 +1,23 @@
 {
   "organizers": [
     {
+      "id": "people-organizers-kingsley-dirisu",
+      "slug": "organizers-kingsley-dirisu",
+      "file": "kingsley-dirisu.jpeg",
+      "caption": "Kingsley Dirisu",
+      "provisional": true,
+      "srcset": {
+        "400": "media/people/organizers/organizers-kingsley-dirisu-400w.webp",
+        "800": "media/people/organizers/organizers-kingsley-dirisu-800w.webp",
+        "1200": "media/people/organizers/organizers-kingsley-dirisu-1200w.webp"
+      },
+      "w": 720,
+      "h": 1080,
+      "fx": 61,
+      "fy": 50,
+      "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAAAwBQCdASoYACQAPxF4slCsJ6SisBVaqYAiCWUAAHfAg3hR/HKMJJFnqrocfMFdq1gXgAD+ZgfxVAtEtra8D2fkQ5c66aUzyYsSfBMJA85KRmvxVMN6sd1PF93NmDe3d/N2dRuFXz4P7cbS2hx0Y0b6ckyLMyx7HE0lLRJZFs0cm66DBRzGFAtG2NsdpsE2/XTuRPmujTyle9KR81YgQDJgMxDT30B/XPVYWFhfuaAAAAAA"
+    },
+    {
       "id": "people-organizers-whatsapp-image-2026-10-08-at-5-54-37-pm-1",
       "slug": "organizers-whatsapp-image-2026-10-08-at-5-54-37-pm-1",
       "file": "WhatsApp Image 2026-10-08 at 5.54.37 PM (1).jpeg",
@@ -18,27 +35,10 @@
       "blur": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABQBACdASoYABAAPxFysFAsJqSisAgBgCIJbACw7Bh7UyQQO6yHK5HErGzgAP2f0+nL8d8i+/onCt+WgtGbh8A+lmleTyXpF5/euzn3YfxU5jPe4v5C6IwwCuP1mByoE6grXXDiZidTejdQDCeYCsfmF+2+GcT3mK+ZzB0Hw7aJXgcRyvPptmUGt013dHs+pBtBEMQ5QXp0MtTbe/OnoAo4AAA="
     },
     {
-      "id": "people-organizers-whatsapp-image-2026-10-09-at-2-22-48-am-2",
-      "slug": "organizers-whatsapp-image-2026-10-09-at-2-22-48-am-2",
-      "file": "WhatsApp Image 2026-10-09 at 2.22.48 AM (2).jpeg",
-      "caption": "Organizer 2",
-      "provisional": true,
-      "srcset": {
-        "400": "media/people/organizers/organizers-whatsapp-image-2026-10-09-at-2-22-48-am-2-400w.webp",
-        "800": "media/people/organizers/organizers-whatsapp-image-2026-10-09-at-2-22-48-am-2-800w.webp",
-        "1200": "media/people/organizers/organizers-whatsapp-image-2026-10-09-at-2-22-48-am-2-1200w.webp"
-      },
-      "w": 720,
-      "h": 1080,
-      "fx": 61,
-      "fy": 50,
-      "blur": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAAAwBQCdASoYACQAPxF4slCsJ6SisBVaqYAiCWUAAHfAg3hR/HKMJJFnqrocfMFdq1gXgAD+ZgfxVAtEtra8D2fkQ5c66aUzyYsSfBMJA85KRmvxVMN6sd1PF93NmDe3d/N2dRuFXz4P7cbS2hx0Y0b6ckyLMyx7HE0lLRJZFs0cm66DBRzGFAtG2NsdpsE2/XTuRPmujTyle9KR81YgQDJgMxDT30B/XPVYWFhfuaAAAAAA"
-    },
-    {
       "id": "people-organizers-whatsapp-image-2026-10-09-at-2-22-48-am",
       "slug": "organizers-whatsapp-image-2026-10-09-at-2-22-48-am",
       "file": "WhatsApp Image 2026-10-09 at 2.22.48 AM.jpeg",
-      "caption": "Organizer 3",
+      "caption": "Organizer 2",
       "provisional": true,
       "srcset": {
         "400": "media/people/organizers/organizers-whatsapp-image-2026-10-09-at-2-22-48-am-400w.webp",
@@ -55,7 +55,7 @@
       "id": "people-organizers-whatsapp-image-2026-10-09-at-2-22-49-am",
       "slug": "organizers-whatsapp-image-2026-10-09-at-2-22-49-am",
       "file": "WhatsApp Image 2026-10-09 at 2.22.49 AM.jpeg",
-      "caption": "Organizer 4",
+      "caption": "Organizer 3",
       "provisional": true,
       "srcset": {
         "400": "media/people/organizers/organizers-whatsapp-image-2026-10-09-at-2-22-49-am-400w.webp",

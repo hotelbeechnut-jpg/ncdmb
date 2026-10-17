@@ -2219,11 +2219,18 @@
     ],
     "videos": [
       {
-        "id": "build-vid-01-webdev",
+        "id": "build-vid-01-animation",
+        "featured": false,
+        "duration": 157.2,
+        "poster": "media/build/build-vid-01-animation-poster.webp",
+        "src": "media/build/build-vid-01-animation.mp4"
+      },
+      {
+        "id": "build-vid-02-webdev",
         "featured": false,
         "duration": 22.6,
-        "poster": "media/build/build-vid-01-webdev-poster.webp",
-        "src": "media/build/build-vid-01-webdev.mp4"
+        "poster": "media/build/build-vid-02-webdev-poster.webp",
+        "src": "media/build/build-vid-02-webdev.mp4"
       }
     ]
   }

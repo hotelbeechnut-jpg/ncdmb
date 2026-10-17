@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T12:24:17.154Z",
+  "generatedAt": "2026-10-17T09:38:45.702Z",
   "days": {
     "day1": {
       "sourceImages": 18,
@@ -82,11 +82,13 @@
     },
     "build": {
       "sourceImages": 1,
-      "sourceVideos": 1,
+      "sourceVideos": 2,
       "manifestImages": 1,
-      "manifestVideos": 1,
-      "outputVideoBytes": 554288,
-      "reencoded": [],
+      "manifestVideos": 2,
+      "outputVideoBytes": 7212139,
+      "reencoded": [
+        "animation.mp4"
+      ],
       "skipped": [],
       "pruned": 0,
       "disappeared": 0
